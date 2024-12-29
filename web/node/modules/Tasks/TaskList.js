@@ -1,4 +1,4 @@
-const DbManager = require('./DbManager');
+const TaskDb = require('./TaskDb');
 const Task = require('./Task');
 
 class TaskList {
@@ -30,7 +30,7 @@ class TaskList {
         }
         const task = new Task(id, title, desc, date, comp)
         this.tasks.set(id, task);
-        await DbManager.insertTask(this.name, task);
+        await TaskDb.insertTask(this.name, task);
     }
 
     async updateTask(id, title, desc, date, comp) {
@@ -53,14 +53,14 @@ class TaskList {
             isUpdated = true;
         }
         if (isUpdated) {
-            await DbManager.updateTask(this.name, task);
+            await TaskDb.updateTask(this.name, task);
         }
     }
 
     async removeTask(id) {
         if (this.tasks.has(id)) {
             this.tasks.delete(id);
-            await DbManager.deleteTask(this.name, id);
+            await TaskDb.deleteTask(this.name, id);
         } else {
             throw new Error(`Task with ID ${id} not found.`);
         }
@@ -79,7 +79,7 @@ class TaskList {
 
     async getFromDB() {
         try {
-            const tasks = await DbManager.getAllTasks(this.name);
+            const tasks = await TaskDb.getAllTasks(this.name);
 
             tasks.forEach(task => {
                 const taskObj = new Task(task.TaskId, task.Title, task.TaskDesc, task.TaskDate, task.Completion);

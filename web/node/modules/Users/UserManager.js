@@ -20,9 +20,9 @@ class UserManager {
     async userLogin(username, password) {
         try {
             const hashed = await bcrypt(password, 10);
-            const isValid = await DbManager.checkLogin(username, password);
+            const isValid = await UserDb.checkLogin(username, password);
             if (isValid) {
-                const userData = await DbManager.getUserData(username);
+                const userData = await UserDb.getUserData(username);
                 const user = User();
                 this.users.set(username, user);
                 return user;
@@ -41,10 +41,10 @@ class UserManager {
         }
     }
 
-    async createUser(username, password) {
+    async createUser(username, email, password) {
         try {
             hashed = await bcrypt.hash(password, 10);
-            await DbManager.newUser(username, hashed);
+            await DbManager.insertUser(username, email, hashed);
         } catch (error) {
             console.error('Enable to create new user: ', error);
         }
@@ -52,7 +52,7 @@ class UserManager {
 
     async removeUser(username) {
         try {
-            await DbManager.removeUser(username);
+            await UserDb.removeUser(username);
             this.userLogout(username);
         } catch (error) {
             console.error('Unable to remove user', error);

@@ -4,47 +4,18 @@ const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'Tasklists',
+    database: 'AppDb',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
 });
 
-class DbManager {
-    static async createTable(table) {
-        const query = 
-            `CREATE TABLE ${table} (
-            TaskId int AUTO_INCREMENT PRIMARY KEY,
-            Title varchar(255),
-            TaskDesc varchar(255),
-            TaskDate datetime,
-            Completion tinyint
-            )`
-        try {
-            const [results] = await pool.query(query);
-            // console.log(`Table "${table}" created exists `, results);
-        } catch (err) {
-            throw new Error(err);
-            // console.error('Error creating table ', err);
-        }
-    }
-
-    static async dropTable(table) {
-        const query = `DROP TABLE IF EXISTS ${table}`;
-        try {
-            const [results] = await pool.query(query);
-            // console.log(`Table "${table}" deleted `, results);
-        } catch (err) {
-            throw new Error(err);
-            // console.error('Error deleting table ', err);
-        }
-    }
-
-    static async insertTask(table, task) {
+class TaskDb {
+    static async insertTask(TaskListId, task) {
         const query = `
-            INSERT INTO ${table} (Title, TaskDesc, TaskDate, Completion)
-            VALUES (?, ?, ?, ?);`
-        const parameters = [task.getTitle(), task.getDesc(), task.getDate(), task.getComp()];
+            INSERT INTO Tasks (TaskListID, TaskTitle, TaskDesc, TaskDate, TaskComp)
+            values (?, ?, ?, ?, ?);`
+        const parameters = [TaskListId, task.getTitle(), task.getDesc(), task.getDate(), task.getComp()];
         try {
             const [results] = await pool.query(query, parameters);
             // console.log('Successfully inserted task ', results);
@@ -54,6 +25,7 @@ class DbManager {
         }
     }
 
+    // Needs update:
     static async updateTask(table, task) {
         const query = `
             UPDATE ${table}
@@ -69,6 +41,7 @@ class DbManager {
         }
     }
 
+    // Needs update:
     static async deleteTask(table, id) {
         const query = `
             DELETE FROM ${table}
@@ -83,6 +56,7 @@ class DbManager {
         }
     }
 
+    // Needs update:
     static async getAllTasks(table) {
         const query = `
             SELECT *
@@ -98,4 +72,4 @@ class DbManager {
     }
 }
 
-module.exports = DbManager;
+module.exports = TaskDb;
