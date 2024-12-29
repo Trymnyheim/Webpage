@@ -1,4 +1,4 @@
-const DbManager = require('./DbManager');
+const UserDb = require('./UserDb');
 const User = require('./User');
 const bcrypt = require('bcrypt');
 
@@ -7,13 +7,13 @@ class UserManager {
         this.users = new Map();
     }
 
-    getUser(username) {
-        if (this.users.has(username)){
-            return this.users.get(username);
+    getUser(userId) {
+        if (this.users.has(userId)){
+            return this.users.get(userId);
         }
     }
 
-    updateUser(username) {
+    updateUser(userId) {
         // Update logic:
     }
 
@@ -23,8 +23,9 @@ class UserManager {
             const isValid = await UserDb.checkLogin(username, password);
             if (isValid) {
                 const userData = await UserDb.getUserData(username);
+                // Handle user data!
                 const user = User();
-                this.users.set(username, user);
+                this.users.set(user.getId(), user);
                 return user;
             }
             else {
@@ -35,9 +36,9 @@ class UserManager {
         }
     }
 
-    userLogout(username) {
-        if (this.users.has(id)) {
-            this.users.delete(username);
+    userLogout(userId) {
+        if (this.users.has(userId)) {
+            this.users.delete(userId);
         }
     }
 
