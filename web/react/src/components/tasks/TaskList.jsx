@@ -32,7 +32,15 @@ function TaskList(props) {
     function updateTask(id, title, desc, date, comp) {
         try {
             // Send request to server
+            
             // Update in client
+            const index = tasks.findIndex((task) => task.id === id);
+            if (index === -1)
+                throw new Error("Task not found.");
+            const updatedTasks = [...tasks];
+            updatedTasks[index] = { ...updatedTasks[index], title, desc, date, comp };
+
+            setTasks(updatedTasks);
             console.log(`Updated task with ID ${id}.`);
         } catch (error) {
             // Show error message to user!
