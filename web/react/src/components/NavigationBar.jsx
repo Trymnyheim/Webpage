@@ -11,11 +11,11 @@ function NavigationBar() {
   	return (
 		<Navbar expand="lg" className="bg-body-tertiary" expanded={expanded}>
 			<Container>
-				<Navbar.Brand as={Link} to="/home">Trym H. Nyheim</Navbar.Brand>
+				<Navbar.Brand as={Link} to="/">Trym H. Nyheim</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : true)} />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
-						<Nav.Link as={Link} to="/home" onClick={handleLinkClick}>Home</Nav.Link>
+						<Nav.Link as={Link} to="/" onClick={handleLinkClick}>Home</Nav.Link>
 						<Nav.Link as={Link} to="/tasks" onClick={handleLinkClick}>Tasks</Nav.Link>
 						<Nav.Link as={Link} to="/games" onClick={handleLinkClick}>Games</Nav.Link>
 						<NavDropdown title="Dropdown" id="basic-nav-dropdown">

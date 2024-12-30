@@ -12,7 +12,7 @@ function App() {
     <Router>
         <NavigationBar />
         <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/games" element={<Games />} />
         </Routes>
