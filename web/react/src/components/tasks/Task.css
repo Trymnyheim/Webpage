@@ -1,3 +1,8 @@
+:root {
+    --darkGreen: rgb(60, 75, 54);
+    --green: rgb(166, 190, 168);
+}
+
 .taskList {
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +12,7 @@
 
 .task {
     width: 240px;
-    background-color: rgb(166, 190, 168);
+    background-color: var(--green);
     margin: 16px;
     border-radius: 8px;
 }
@@ -18,7 +23,7 @@
     padding: 8px;
     border-radius: 12px 0;
     color: white;
-    background-color: rgb(60, 75, 54);
+    background-color: var(--darkGreen);
 }
 
 .taskBody {
@@ -63,3 +68,29 @@
         max-width: none;
         }
     }
+
+.taskMenu {
+    text-align: center;
+    background-color: var(--darkGreen);
+}
+
+.taskMenuTitle {
+    background-color: white;
+    color: var(--darkGreen);
+}
+
+.taskMenuItem{
+    display: block;
+    color: white;
+    overflow-wrap: break-word;
+    text-align: left;
+    cursor: pointer;
+    list-style: none;
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+.taskMenuItem:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+               -2px -2px 3px rgba(255, 255, 255, 0.5);
+}
