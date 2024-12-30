@@ -1,12 +1,16 @@
 :root {
     --darkGreen: rgb(60, 75, 54);
     --green: rgb(166, 190, 168);
+    --beige: rgb(202, 195, 185);
+}
+
+body {
+    background-color: var(--beige);
 }
 
 .taskList {
     display: flex;
     flex-wrap: wrap;
-    background-color: aliceblue;
     margin: 12px;
 }
 
@@ -75,7 +79,7 @@
 }
 
 .taskMenuTitle {
-    background-color: white;
+    background-color: var(--beige);
     color: var(--darkGreen);
 }
 
