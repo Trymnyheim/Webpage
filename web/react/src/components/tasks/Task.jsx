@@ -8,10 +8,9 @@ function Task(props) {
     const [modalShow, setModalShow] = useState(false);
 
     const toggleComp = () => {
-        setIsChecked((prevState) => {
-            props.update(props.id, props.title, props.desc, props.date, !prevState ? 1 : 0);
-            return !prevState 
-        })
+        const newCheckVal = !isChecked;
+        setIsChecked(newCheckVal);
+        props.update(props.id, props.title, props.desc, props.date, newCheckVal ? 1 : 0);
     };
 
     return (

@@ -3,51 +3,55 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
-function TaskEditor(props) {
-    const [title, setTitle] = useState(props.title)
-    const [desc, setDesc] = useState(props.desc)
-    const [date, setDate] = useState(props.date)
+function NewTask({onHide, show, addTask}) {
+    const [title, setTitle] = useState('')
+    const [desc, setDesc] = useState('')
+    const [date, setDate] = useState('')
 
-    function update() {
-        event.preventDefault();
-        props.update(props.id, title, desc, date, props.comp)
-        props.onHide()
+    function discardNew() {
+        setTitle('');
+        setDesc('');
+        setDate('');
+        onHide();
     }
 
-    function discard() {
-        setTitle(props.title)
-        setDesc(props.desc)
-        setDate(props.date)
-        props.onHide()
+    function saveNew() {
+        event.preventDefault();
+        addTask(title, desc, date);
+        onHide();
+        discardNew();
     }
 
     return (
-        <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" centered show = {props.show} onHide={props.onHide}>
+        <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" centered show = {show} onHide={onHide}>
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    Editing Task
+                    Create New Task
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form onSubmit={update}>
+                <Form onSubmit={saveNew}>
                     <Form.Group>
+                        <Form.Label>Title:</Form.Label>
                         <Form.Control className = "TEInput" type="text" value={title} onChange = {(event) => setTitle(event.target.value)}/>
                     </Form.Group>
                     <Form.Group>
+                        <Form.Label>Description:</Form.Label>
                         <Form.Control className = "TEInput" type="text" value={desc} onChange = {(event) => setDesc(event.target.value)}/>
                     </Form.Group>
                     <Form.Group>
+                        <Form.Label>Date:</Form.Label>
                         <Form.Control className = "TEInput" type="text" value={date} onChange = {(event) => setDate(event.target.value)}/>
                     </Form.Group>
                     <button type="submit" style={{ display: 'none' }}></button>
-                </Form>           
+                </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant = "danger" onClick={discard}>Discard</Button>
-                <Button variant = "success" onClick={update}>Save Change</Button>
+                <Button variant = "danger" onClick={discardNew}>Discard</Button>
+                <Button variant = "success" onClick={saveNew}>Save Change</Button>
             </Modal.Footer>
         </Modal>
     )
 }
 
-export default TaskEditor
+export default NewTask

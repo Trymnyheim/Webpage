@@ -2,7 +2,7 @@
 function GamesApp() {
     return (
         <>
-            <h1>Game center</h1>
+            <h2>Game center</h2>
         </>
     )
 }

@@ -11,7 +11,7 @@
 }
 
 .task {
-    width: 240px;
+    width: 300px;
     background-color: var(--green);
     margin: 16px;
     border-radius: 8px;
@@ -65,7 +65,7 @@
 
 @media only screen and (max-width: 480px) {
     .task {
-        max-width: none;
+        width: 100%;
         }
     }
 
