@@ -22,7 +22,7 @@ function TaskEditor(props) {
     }
 
     return (
-        <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" centered show = {props.show} onHide={props.onHide}>
+        <Modal size="lg" centered show = {props.show} onHide={props.onHide}>
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
                     Editing Task

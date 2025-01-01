@@ -5,6 +5,7 @@ export function validateEmail(email) {
 }
 
 export function validatePassword(password) {
+    // Needs update to allow special characters..
     const format = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d.!@#$%^&*]{10,}$/;
     if ((password.length) > 200) return false
     return format.test(password);

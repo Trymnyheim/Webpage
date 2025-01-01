@@ -6,13 +6,11 @@ import NavigationBar from './components/NavigationBar.jsx';
 import Home from './components/home/HomeApp.jsx'; 
 import Tasks from './components/tasks/TasksApp.jsx'; 
 import Games from './components/games/GamesApp.jsx';
-import Login from './components/Login.jsx';
 
 function App() {
   return (
     <Router>
         <NavigationBar />
-        <Login />
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tasks" element={<Tasks />} />

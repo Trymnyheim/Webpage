@@ -1,44 +1,55 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { validateEmail, validatePassword } from '../utils/Validation';
 import '../app.css';
+import Modal from 'react-bootstrap/Modal';
 
-function Regsiter() {
+
+function Register({registerShow, handleRegisterClose}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
-
     const [validEmail, setValidEmail] = useState(true);
     const [validPassword, setValidPassword] = useState(true);
     const [validConfirm, setValidConfirm] = useState(true);
     const [requirementsVisible, setRequirementsVisible] = useState(false);
 
-    function validate() {
-        setValidEmail(validateEmail(email));
-        setValidPassword(validatePassword(password));
-        setValidConfirm(password === passwordConfirm);
-        return validEmail && validPassword && validConfirm;
-    }
-
     const toggleReqs = () => {
         setRequirementsVisible((prev) => !prev);
       };
 
-    const handleRegistration = (event) => {
-        event.preventDefault()
-        if (validate())
-            console.log('Registered');
+    const handleRegistration = async (event) => {
+        event.preventDefault();
+        const emailVal = validateEmail(email);
+        const passVal = validatePassword(password);
+        const confVal = password === passwordConfirm;
+        setValidEmail(emailVal);
+        setValidPassword(passVal);
+        setValidConfirm(confVal);
+        if (emailVal && passVal && confVal) {
+            try {
+                // Send server request
+                handleRegisterClose();
+            } catch (err) {
+                console.error(err);
+            }
+        }
     };
 
     return (
         <>
-            <Form onSubmit={handleRegistration}>
+            <Modal centered show={registerShow} onHide={handleRegisterClose}>
+                <Form onSubmit={handleRegistration}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Register</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
                 <Form.Label>E-mail address:</Form.Label>
-                <Form.Control value={email} onChange={(event) => setEmail(event.target.value)} ></Form.Control>
+                <Form.Control type="email" value={email} onChange={(event) => setEmail(event.target.value)} ></Form.Control>
                 {!validEmail && <p className="error">Must contain valid email address.</p>}
                 <Form.Label>Password:</Form.Label>
-                <Form.Control value={password} onChange={(event) => setPassword(event.target.value)} ></Form.Control>
+                <Form.Control type="password" value={password} onChange={(event) => setPassword(event.target.value)} ></Form.Control>
                 {!validPassword && 
                 <p className="error">Invalid password. <span onClick={toggleReqs} className="clickable">See requirements here {(requirementsVisible) ? '⯅' : '⯆'}</span></p>}
                 {requirementsVisible && 
@@ -52,12 +63,17 @@ function Regsiter() {
                     </ul>
                 </div>}
                 <Form.Label>Confirm password:</Form.Label>
-                <Form.Control value={passwordConfirm} onChange={(event) => setPasswordConfirm(event.target.value)}></Form.Control>
+                <Form.Control type="password" value={passwordConfirm} onChange={(event) => setPasswordConfirm(event.target.value)}></Form.Control>
                 {!validConfirm && <p className="error">Password confirmation does not match.</p>}
-                <Button type='submit'>Register</Button>
-            </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleRegisterClose}>Close</Button>
+                        <Button type='submit' onClick={handleRegistration}>Register</Button>
+                    </Modal.Footer>
+                </Form>
+      		</Modal>
         </>
     )
 }
 
-export default Login;
+export default Register;
