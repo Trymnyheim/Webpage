@@ -5,3 +5,21 @@ body {
 h2 {
     text-align: center;
 }
+
+.error {
+    color: rgb(136, 0, 0);
+}
+
+.clickable {
+    font-weight: 500;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.formInfo {
+    background-color: white;
+    padding: 8px;
+    border: solid 1px black
+}
