@@ -3,5 +3,12 @@
     "tasks": "Tasks",
     "games": "Games",
     "register": "Register",
-    "login": "Login"
+    "login": "Login",
+    "email": "E-mail",
+    "password": "Password",
+    "confirmPass": "Confirm password",
+    "close": "Close",
+    "emailError": "Must contain valid email address.",
+    "passwordError": "Invalid password.",
+    "loginError": "Unable to log in."
 }

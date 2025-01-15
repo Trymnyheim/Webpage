@@ -6,7 +6,7 @@ import '../app.css';
 import Modal from 'react-bootstrap/Modal';
 
 
-function Login({loginShow, handleLoginClose}) {
+function Login({loginShow, handleLoginClose, t}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [validEmail, setValidEmail] = useState(true);
@@ -38,21 +38,21 @@ function Login({loginShow, handleLoginClose}) {
             <Modal centered show={loginShow} onHide={handleLoginClose}>
                 <Form onSubmit={handleLogin}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Login</Modal.Title>
+                        <Modal.Title>{t("login")}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Form.Label>E-mail address:</Form.Label>
+                        <Form.Label>{t("email")}:</Form.Label>
                         <Form.Control type="email" value={email} onChange={(event) => setEmail(event.target.value)} ></Form.Control>
-                        {!validEmail && <p className="error">Please provide a valid email address.</p>}
-                        <Form.Label>Password:</Form.Label>
+                        {!validEmail && <p className="error">{t("emailError")}</p>}
+                        <Form.Label>{t("password")}</Form.Label>
                         <Form.Control type="password" value={password} onChange={(event) => setPassword(event.target.value)} ></Form.Control>
                         {!validPassword && 
-                        <p className="error">Password does not meet requirements.</p>}
+                        <p className="error">{t("passwordError")}</p>}
                         {!validLogin &&
-                        <p className="error">Ugyldig passord. Du skrev ikke "TrymErKul1"</p>}
+                        <p className="error">{t("loginError")}</p>}
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleLoginClose}>Close</Button>
+                        <Button variant="secondary" onClick={handleLoginClose}>{t("close")}</Button>
                         <Button type='submit' onClick={handleLogin}>Login</Button>
                     </Modal.Footer>
                 </Form>

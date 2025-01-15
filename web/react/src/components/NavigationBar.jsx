@@ -50,8 +50,8 @@ function NavigationBar() {
 					<LanguageSwitcher />
 				</Navbar.Collapse>
 			</Container>
-			<Register registerShow={registerShow} handleRegisterClose={handleRegisterClose} />
-			<Login loginShow={loginShow} handleLoginClose={handleLoginClose} />
+			<Register registerShow={registerShow} handleRegisterClose={handleRegisterClose} t={t}/>
+			<Login loginShow={loginShow} handleLoginClose={handleLoginClose} t={t} />
 		</Navbar>
   	)
 }

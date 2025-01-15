@@ -2,6 +2,13 @@
     "home": "Hjem",
     "tasks": "Gjøremål",
     "games": "Spill",
-    "register": "Registrering",
-    "login": "Login"
-}
+    "register": "Registrer deg",
+    "login": "Login",
+    "email": "E-post",
+    "password": "Passord",
+    "confirmPass": "Bekreft passord",
+    "close": "Lukk",
+    "emailError": "Må inneholde gyldig e-postadresse.",
+    "passwordError": "Ugyldig passord.",
+    "passConfError": "Passordbekreftelse matcher ikke.",
+    "loginError": "Kunne ikke logge inn."}
