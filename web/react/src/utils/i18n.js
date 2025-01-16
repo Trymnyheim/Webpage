@@ -11,7 +11,7 @@ i18n
     },
     lng: 'en', // Default language
     fallbackLng: 'en', // Fallback language if the current language is not available
-    ns: ['common', 'navigation'], // Namespaces you're using
+    ns: ['common', 'navigation', 'games'], // Namespaces you're using
     defaultNS: 'common', // Default namespace to load
     interpolation: {
       escapeValue: false, // React handles escaping
