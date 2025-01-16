@@ -1,12 +1,13 @@
-function Doors() {
+function Doors({ monty }) {
     return (
-        <> 
-            <img className="door" />
-            <img className="door" />
-            <img className="door" />
-
-        </>
-    )
+        <div className="doors"> 
+            {monty.doors.map((door, i) => (
+                <div onClick={monty.select(i)} key={i} className="door">
+                    <p>{door ? 'Car' : 'Goat'}</p>
+                </div>
+            ))}
+        </div>
+    );
 }
 
 export default Doors;
