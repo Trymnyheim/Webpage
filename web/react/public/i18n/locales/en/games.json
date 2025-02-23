@@ -1,6 +1,9 @@
 {
     "monty": {
         "ingress": "In the Monty Hall problem you are a contestant at a game show. You will be offered the choice between opening three different doors. Behind one of them is the prize, a car, but behind the other two there are goats. At first you select a door that you wish to open. However, then the host opens a different door than what you chose and reveals a goat behind it. You are then asked, \"Would you like to switch out your door?\".",
-        "question": "Will making the switch increase the chances of winning?"
+        "question": "Will making the switch increase the chances of winning?",
+        "switch": "Do you want to switch? Make your final choice!",
+        "win": "You won!",
+        "lose": "You lost!"
     }
 }

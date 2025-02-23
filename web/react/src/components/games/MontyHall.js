@@ -2,6 +2,22 @@ class MontyHall {
     constructor() {
         this.doors = this.getDoors()
     }
+
+    getGoat(selection) {
+        return [0, 1, 2].find((n) => n !== selection && !this.doors[n]);
+    }
+
+    getDoors() {
+        const doors = [false, false, false];
+        const car = this.random(3);
+        doors[car] = true;
+        return doors;
+    }
+    
+    random(x) {
+        return Math.floor(Math.random() * x);
+    }
+
 /*
     playMonty(shouldSwitch) {
         let selection = random(3);
@@ -11,27 +27,7 @@ class MontyHall {
         }
         return doors[selection]
     }
-    
-    getGoat(doors, selection) {
-        return [0, 1, 2].find((n) => n !== selection && !doors[n]);
-    }
-*/ 
-    getDoors() {
-        const doors = [false, false, false];
-        const car = this.random(3);
-        doors[car] = true;
-        return doors;
-    }
 
-    select(index) {
-        console.log(index);
-    }
-    
-    random(x) {
-        return Math.floor(Math.random() * x);
-    }
-
-/*
     testMonty(amount, shouldSwitch) {
         let success = 0;
         let fail = 0;
