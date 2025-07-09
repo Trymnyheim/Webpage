@@ -1,8 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
-import { validateEmail, validatePassword } from '/src/utils/Validation';
-import '/src/app.css';
+import { validateEmail, validatePassword } from '../utils/Validation';
 import Modal from 'react-bootstrap/Modal';
 
 
