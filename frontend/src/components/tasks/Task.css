@@ -1,0 +1,100 @@
+:root {
+    --darkGreen: rgb(60, 75, 54);
+    --green: rgb(166, 190, 168);
+    --beige: rgb(230, 226, 221);
+}
+
+body {
+    background-color: var(--beige);
+}
+
+.taskList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+}
+
+.task {
+    width: 300px;
+    background-color: var(--green);
+    margin: 16px;
+    border-radius: 8px;
+}
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 12px 0;
+    color: white;
+    background-color: var(--darkGreen);
+}
+
+.taskBody {
+    padding: 8px;
+    min-height: 120px;
+}
+
+.taskFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.taskButtons {
+    display: flex;
+    justify-content: right;
+}
+
+.button {
+    margin: 0 4px;
+}
+
+.greenCheck input[type="checkbox"]{
+    width: 24px;
+    height: 24px;
+    box-shadow: none;
+    border-color: green;
+    margin: 8px;
+  }
+  
+.greenCheck input[type="checkbox"]:checked {
+    background-color: green;
+    color: green;
+  }
+
+.TEInput{
+    margin: 12px 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .task {
+        width: 100%;
+        }
+    }
+
+.taskMenu {
+    text-align: center;
+    background-color: var(--darkGreen);
+}
+
+.taskMenuTitle {
+    background-color: var(--beige);
+    color: var(--darkGreen);
+}
+
+.taskMenuItem{
+    display: block;
+    color: white;
+    overflow-wrap: break-word;
+    text-align: left;
+    cursor: pointer;
+    list-style: none;
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+.taskMenuItem:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+               -2px -2px 3px rgba(255, 255, 255, 0.5);
+}

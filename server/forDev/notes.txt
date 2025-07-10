@@ -1,0 +1,4 @@
+
+
+UserDb:
+- Ensure that only unique usernames are allowed.
