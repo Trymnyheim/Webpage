@@ -6,12 +6,14 @@ import Home from './pages/Home.jsx';
 
 function App() {
   return (
-    <Router>
-        <NavigationBar />
-        <Routes>
-            <Route path="/" element={<Home />} />
-        </Routes>
-    </Router>
+        <div className="body-content">
+            <Router>
+                <NavigationBar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </Router>
+        </div>
     )
 }
 
