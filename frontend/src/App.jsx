@@ -7,14 +7,15 @@ import AboutMe from './pages/AboutMe.jsx';
 
 function App() {
   return (
-        <div className="body-content">
-            <Router>
-                <NavigationBar />
+        <Router>
+            <NavigationBar />
+            <div className="body-content">
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/aboutme" element={<AboutMe />} />
                 </Routes>
-            </Router>
-        </div>
+            </div>
+        </Router>
     )
 }
 
