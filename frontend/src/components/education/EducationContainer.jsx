@@ -8,11 +8,10 @@ function EducationContainer() {
     const education = t('education', { returnObjects: true });
 
     return (
-        <div>
+        <div className="education-container">
             {education.map((educationItem, index) => (
-                <EducationItem key={index} educationItem={educationItem} />
+                <EducationItem key={index} educationItem={educationItem} t={t} />
             ))}
-
         </div>
     )
 }

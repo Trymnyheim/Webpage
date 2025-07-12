@@ -1,6 +1,10 @@
 {
     "title": "Utdanning",
     "about": "",
+    "general": {
+        "exchangeTo": "Utveksling til",
+        "about": "Les mer"
+    },
     "education": 
         [
             {
@@ -12,7 +16,7 @@
                 "degree": "Informatikk: Programmering og systemarkitektur",
                 "level": "Master",
                 "start": "2025, Høst",
-                "end": "",
+                "end": "ETA 2027, Vår",
                 "exchange": {},
                 "link": "https://www.uio.no/studier/program/informatikk-programmering-master/index.html"
             },
@@ -25,7 +29,7 @@
                 "degree": "Informatikk: Programmering og systemarkitektur",
                 "level": "Bachelor",
                 "start": "2024, Høst",
-                "end": "",
+                "end": "ETA 2026, Vår",
                 "exchange": {
                     "institution": "École d'Ingénieurs Paris",
                     "semesters": 1

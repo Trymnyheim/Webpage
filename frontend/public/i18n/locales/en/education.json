@@ -2,6 +2,10 @@
 
     "title": "Education",
     "about": "",
+    "general": {
+        "exchangeTo": "Exchange to",
+        "about": "Read more"
+    },
     "education": 
         [
             {
@@ -13,7 +17,7 @@
                 "degree": "Informatics: Programming and System Architecture",
                 "level": "Master",
                 "start": "2025, Fall",
-                "end": "",
+                "end": "ETA 2027, Spring",
                 "exchange": {},
                 "link": "https://www.uio.no/english/studies/programmes/informatics-programming-master/index.html"
             },
@@ -26,7 +30,7 @@
                 "degree": "Informatics: Programming and System Architecture",
                 "level": "Bachelor",
                 "start": "2024, Fall",
-                "end": "",
+                "end": "ETA 2026, Spring",
                 "exchange": {
                     "institution": "École d'Ingénieurs Paris",
                     "semesters": 1
@@ -42,7 +46,7 @@
                 "degree": "Information Processing",
                 "level": "One year program",
                 "start": "2023, Fall",
-                "end": "2024, Vår",
+                "end": "2024, Spring",
                 "exchange": {},
                 "link": "https://www.usn.no/studier/arsstudium-i-informasjonsbehandling/"
             },
