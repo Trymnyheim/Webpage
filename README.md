@@ -10,7 +10,8 @@ Welcome to my personal webpage! Here, I’ll be sharing information about myself
 
 ## Interface
 
-The frontend is built with a **React** application and hosted via **Netlify**.  
+The frontend is built with a **React** application and hosted via **Netlify**.
+
 I use **React Bootstrap** for styling and layout, making it easier to achieve a responsive design with minimal effort.
 
 The application uses **React Router (BrowserRouter)** for dynamic navigation and **i18next** for supporting both **English** and **Norwegian** languages.
