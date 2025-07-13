@@ -6,8 +6,6 @@ import '../components/fun/fun.css';
 function Fun() {
 
     const funItems = [
-        {title: 'Monty Hall', img: '/imgs/fun/monty/monty-thumb.svg', path: '/fun/monty'},
-        {title: 'Monty Hall', img: '/imgs/fun/monty/monty-thumb.svg', path: '/fun/monty'},
         {title: 'Monty Hall', img: '/imgs/fun/monty/monty-thumb.svg', path: '/fun/monty'}
     ]
 
