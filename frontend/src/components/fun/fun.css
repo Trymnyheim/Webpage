@@ -46,7 +46,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
-    width: var(--body-size);
+    max-width: var(--body-size);
 }
 
 /* If overlay mode is active and show = false, hide the card container */
