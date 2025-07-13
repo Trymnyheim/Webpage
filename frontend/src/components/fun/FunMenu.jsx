@@ -35,14 +35,14 @@ function FunMenu({funItems, isOverlay}) {
     )
 }
 
-function FunCard({funItem}) {
+function FunCard({funItem, isBack}) {
     return (
         <Link to={funItem.path}>
             <Card className="fun-card center bg-success" style={{ width: '16rem' }}>
                 <div className="fun-card-title">
                     <Card.Title className="margin">{funItem.title}</Card.Title>
                 </div>
-                <Card.Img src={funItem.img}/>
+                <Card.Img src={funItem.img} className={isBack ? 'back-img' : ''}/>
             </Card>
         </Link>
     )
