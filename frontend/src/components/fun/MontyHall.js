@@ -2,6 +2,7 @@ class MontyHall {
     constructor() {
         this.doors = [];
         this.statistics = undefined;
+        this.getDoors();
     }
 
     getGoat(selection) {
