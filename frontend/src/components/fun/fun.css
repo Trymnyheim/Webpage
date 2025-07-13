@@ -1,0 +1,81 @@
+@import url('./../../Colors.css');
+
+.doors {
+    display: flex;
+}
+
+.door {
+    width: 180px;
+    height: 200px;
+    margin: 8px auto; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.door:hover {
+    cursor: pointer;
+}
+
+.door img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fun-menu {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Full-width button */
+.fun-menu .btn {
+    width: 100vw;
+}
+
+/* Default visible container */
+.fun-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100vw;
+}
+
+/* If overlay mode is active and show = false, hide the card container */
+.fun-menu.fun-overlay-active .fun-card-container {
+    display: none;
+}
+
+/* When toggled (show = true), show it again as overlay */
+.fun-menu.fun-overlay-active .fun-card-container.fun-overlay {
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    border: solid 2px var(--green);
+    border-radius: 6px;
+    padding: 24px;
+    background-color: var(--green-light);
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Style for individual fun cards */
+.fun-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fun-card-title {
+    position: absolute;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 24px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
