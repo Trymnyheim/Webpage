@@ -13,7 +13,12 @@ function Fun() {
         <div>
             <Routes>
                 <Route index element={<FunMenu funItems={funItems}/>} />
-                <Route path="monty" element={<><FunMenu funItems={funItems} isOverlay /></>} />
+                <Route path="monty" element={
+                    <>
+                        <FunMenu funItems={funItems} isOverlay />
+                        <Monty />
+                    </>}
+                />
             </Routes>
         </div>
     )
