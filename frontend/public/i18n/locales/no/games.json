@@ -1,9 +1,22 @@
 {
     "monty": {
-        "ingress": "I Monty Hall problemet er man en deltaker på et gameshow. Her får man valget mellom å åpne tre forskjellige dører. Bak en av dørene befinner premien seg, nemlig en bil, mens bak de to andre befinner det seg en geit. Man velger først en av dørene man ønsker å åpne. Deretter åpner programlederen en av de andre dørene enn den du har valgt og viser at det der befinner seg en geit. Så blir du spurt, \"Vil du bytte dør?\".",
-        "question": "Vil det å bytte dør øke sjansene for å vinne?",
-        "switch": "Står du i valget eller vil du bytte?",
-        "win": "Du vant!",
-        "lose": "Du tapte!"
+        "game": {
+            "ingress": "I Monty Hall problemet er man en deltaker på et gameshow. Her får man valget mellom å åpne tre forskjellige dører. Bak en av dørene befinner premien seg, nemlig en bil, mens bak de to andre befinner det seg en geit. Man velger først en av dørene man ønsker å åpne. Deretter åpner programlederen en av de andre dørene enn den du har valgt og viser at det der befinner seg en geit. Så blir du spurt, \"Vil du bytte dør?\".",
+            "question": "Vil det å bytte dør øke sjansene for å vinne?",
+            "switch": "Står du i valget eller vil du bytte?",
+            "win": "Du vant!",
+            "lose": "Du tapte!"
+        },
+        "statistics": {
+            "title": "Test sannsynligheten",
+            "ingress": "Velg din foretrukkede teststørrelse og se hvor mange spill som ender i suksess når man bytter i forhold til å beholde det første valget.",
+            "input-label": "Teststørrelse",
+            "generate": "Generer statistikk",
+            "with": "Med bytte",
+            "without": "Uten bytte",
+            "success": "Suksess",
+            "fail": "Feil",
+            "total": "Totalt"
+        }
     }
 }
