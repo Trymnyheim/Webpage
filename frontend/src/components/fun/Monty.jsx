@@ -5,6 +5,12 @@ import Doors from './Doors.jsx';
 import MontyHall from './MontyHall.js';
 import MontyStatistics from './MontyStatistics.jsx';
 
+/* TODO:
+    - Make monty game responsive
+    - Refine game's text of ingress
+    - Move game into own file?
+*/
+
 function Monty() {
     const { t } = useTranslation("games");
     const tGame = (key) => t(`monty.game.${key}`)
@@ -44,7 +50,7 @@ function Monty() {
 
     return (
         <div>
-            <div className="center">
+            <div className="center padding">
                 <h2>Monty Hall</h2>
                 <p style={{textAlign: "center"}}>{tGame('ingress')}</p>
                 <h5 style={{textAlign: "center"}}>{tGame('question')}</h5>
