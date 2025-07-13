@@ -28,14 +28,16 @@
 .fun-menu {
     width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 /* Full-width button */
 .fun-menu .btn {
-    width: 100vw;
+    width: 100%;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 24px;
 }
 
 /* Default visible container */
@@ -44,7 +46,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
-    width: 100vw;
+    width: var(--body-size);
 }
 
 /* If overlay mode is active and show = false, hide the card container */
