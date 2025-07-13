@@ -36,8 +36,16 @@
     margin: 12px;
 }
 
+.margin-sm-vertical {
+    margin: 12px 0;
+}
+
 .margin {
     margin: 24px;
+}
+
+.margin-vertical {
+    margin: 24px 0;
 }
 
 .margin-lg {
