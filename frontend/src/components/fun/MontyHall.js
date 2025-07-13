@@ -78,33 +78,4 @@ class MontyHall {
     }
 }
 
-
-
-/*
-
-'switch': {
-    'success': {
-        'number': 68,
-        'percent': 68
-    },
-    'fail': {
-        'number': 32,
-        'percent': 32
-    },
-    'total': 100
-},
-'without': {
-    'success': {
-        'number': 62,
-        'percent': 31
-    },
-    'fail': {
-        'number': 138,
-        'percent': 70
-    },
-    'total': 200
-}
-
-*/
-
 export default MontyHall;
