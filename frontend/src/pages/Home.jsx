@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Panorama from '../components/panorama/Panorama.jsx'
 
 function HomeApp() {
 
@@ -8,6 +9,7 @@ function HomeApp() {
         <div className="center" style={{marginTop: '24px'}}>
             <h1>{t('title')}</h1>
             <p>{t('text')}</p>
+            <Panorama />
         </div>
     )
 }

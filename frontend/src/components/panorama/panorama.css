@@ -1,0 +1,12 @@
+.panorama-container {
+    height: 80vh;
+    overflow: hidden;
+}
+
+.panorama {
+    height: 100%;
+}
+
+.panorama img{
+    height: 100%
+}
