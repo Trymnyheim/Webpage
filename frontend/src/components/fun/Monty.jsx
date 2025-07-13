@@ -3,9 +3,12 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Doors from './Doors.jsx';
 import MontyHall from './MontyHall.js';
+import MontyStatistics from './MontyStatistics.jsx';
 
 function Monty() {
     const { t } = useTranslation("games");
+    const tGame = (key) => t(`monty.game.${key}`)
+    const tStats = (key) => t(`monty.statistics.${key}`)
 
     const initializeGame = () => ({
         montyHall: new MontyHall(),
@@ -40,18 +43,20 @@ function Monty() {
     };
 
     return (
-        <>
-            <h2>Monty Hall</h2>
-            <p style={{textAlign: "center"}}>{t('monty.ingress')}</p>
-            <h5 style={{textAlign: "center"}}>{t('monty.question')}</h5>
-            <Doors gameState={gameState} selectDoor={selectDoor} />
-            <h2>{gameState.goatDoor !== -1 ? t("monty.switch") : ""}</h2>
-            {gameState.isFinished && <h2>{gameState.isWin ? t("monty.win") : t("monty.lose")}</h2>}
-            <br/>
-            <Button style={{marginLeft: "45vw"}} onClick={reset}>Reset</Button>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        </>
-    );
+        <div>
+            <div className="center">
+                <h2>Monty Hall</h2>
+                <p style={{textAlign: "center"}}>{tGame('ingress')}</p>
+                <h5 style={{textAlign: "center"}}>{tGame('question')}</h5>
+                <Doors gameState={gameState} selectDoor={selectDoor} />
+                <h2>{gameState.goatDoor !== -1 ? tGame('switch') : ""}</h2>
+                {gameState.isFinished && <h2>{gameState.isWin ? tGame('win') : tGame('lose')}</h2>}
+                <br/>
+                <Button onClick={reset}>Reset</Button>
+            </div>
+            <MontyStatistics t={tStats} />
+        </div>
+    )
 }
 
 
