@@ -5,6 +5,8 @@ Welcome to my personal webpage! Here, I’ll be sharing information about myself
 🔗 [https://trymhnyheim.no/](https://trymhnyheim.no/)
 
 **Note:** The site is currently under development.
+Check out the unpolished progress at:
+🔗 [https://dev.trymhnyheim.no/](https://dev.trymhnyheim.no/)
 
 ---
 
