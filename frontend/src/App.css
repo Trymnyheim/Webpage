@@ -1,3 +1,5 @@
+@import url('./Colors.css');
+
 .body-content {
     display: flex;
     justify-content: center;
@@ -5,8 +7,12 @@
     max-width: 1200px;
 }
 
+.bg-green {
+    background-color: var(--green);
+}
+
 .error {
-    color: rgb(136, 0, 0);
+    color: var(--error);
 }
 
 .clickable {
