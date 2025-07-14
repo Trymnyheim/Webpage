@@ -1,0 +1,82 @@
+{
+    "title": "Utdanning",
+    "about": "",
+    "general": {
+        "exchangeTo": "Utveksling til",
+        "about": "Les mer"
+    },
+    "education": 
+        [
+            {
+                "institution": {
+                    "name": "Universitetet i Oslo",
+                    "logo": "/logos/uio-logo-no.svg",
+                    "path": "https://www.uio.no/"
+                },
+                "degree": "Informatikk: Programmering og systemarkitektur",
+                "level": "Master",
+                "start": "2025, Høst",
+                "end": "ETA 2027, Vår",
+                "exchange": {},
+                "link": "https://www.uio.no/studier/program/informatikk-programmering-master/index.html"
+            },
+            {
+                "institution": {
+                    "name": "Universitetet i Oslo",
+                    "logo": "/logos/uio-logo-no.svg",
+                    "path": "https://www.uio.no/"
+                },
+                "degree": "Informatikk: Programmering og systemarkitektur",
+                "level": "Bachelor",
+                "start": "2024, Høst",
+                "end": "ETA 2026, Vår",
+                "exchange": {
+                    "institution": "École d'Ingénieurs Paris",
+                    "semesters": 1
+                },
+                "link": "https://www.uio.no/studier/program/informatikk-programmering/"
+            },
+            {
+                "institution": {
+                    "name": "Universitetet i Sørøst-Norge",
+                    "logo": "/logos/USN-logo_hvit.svg",
+                    "path": "https://www.usn.no/"
+                },
+                "degree": "Informasjonsbehandling",
+                "level": "Årsstudium",
+                "start": "2023, Høst",
+                "end": "2024, Vår",
+                "exchange": {},
+                "link": "https://www.usn.no/studier/arsstudium-i-informasjonsbehandling/"
+            },
+            {
+                "institution": {
+                    "name": "Uniarts Helsinki, Sibeliusakademiet",
+                    "logo": "/logos/uniarts-logo.svg",
+                    "path": "https://www.uniarts.fi/en/units/sibelius-academy/"
+                },
+                "degree": "Utøvende klassisk musikk, Slagverk",
+                "level": "Master",
+                "start": "2021, Høst",
+                "end": "Ikke fullført",
+                "exchange": {},
+                "link": "https://www.uniarts.fi/en/study-programmes/percussion-classical-instrument-bachelor-and-master/"
+            },
+            {
+                "institution": {
+                    "name": "Universitetet i Bergen",
+                    "logo": "/logos/uib-white-no.png",
+                    "path": "https://www.uib.no/"
+                },
+                "degree": "Utøvende klassisk musikk, Slagverk",
+                "level": "Bachelor",
+                "start": "2017, Høst",
+                "end": "2021, Vår",
+                "exchange": {
+                    "institution": "Uniarts Helsinki, Sibeliusakademiet",
+                    "semesters": 2
+                },
+                "link": "https://www.uib.no/grieg/25211/bachelor-i-ut%C3%B8vende-musikk-eller-komposisjon"
+            }
+        ]
+}
