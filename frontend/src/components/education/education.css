@@ -1,3 +1,5 @@
+@import url('./../../Colors.css');
+
 .education-item {
     width: 100%;
     text-align: center;
@@ -8,7 +10,7 @@
     flex-wrap: wrap;
     max-width: 700px;
     padding: 12px;
-    gap: 48px;
+    gap: 24px;
 }
 
 .institution-container {
