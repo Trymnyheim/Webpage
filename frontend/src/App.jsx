@@ -13,6 +13,8 @@ function App() {
             <div className="body-content">
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/fun/*" element={<Fun />} />
+                    <Route path="/aboutme" element={<AboutMe />} />
                 </Routes>
             </div>
         </Router>
