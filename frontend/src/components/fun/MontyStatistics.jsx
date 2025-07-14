@@ -22,7 +22,6 @@ function MontyStatistics({ t }) {
 
         const newMonty = new MontyHall();
         newMonty.generateStatistics(parseInt(size));
-        setMonty(newMonty);
         setStatistics(newMonty.statistics);
     }
 
