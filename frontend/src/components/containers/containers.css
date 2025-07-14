@@ -1,0 +1,28 @@
+.read-more-wrapper {
+  width: 100%;
+  position: relative;
+  padding: 24px;
+}
+
+.read-more-container {
+  max-height: 200px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.read-more-container.readmore {
+  max-height: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.read-more-toggle {
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+}
