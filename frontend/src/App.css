@@ -1,12 +1,18 @@
+@import url('./Colors.css');
+
 .body-content {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: var(--body-size);
+}
+
+.bg-green {
+    background-color: var(--green);
 }
 
 .error {
-    color: rgb(136, 0, 0);
+    color: var(--error);
 }
 
 .clickable {
@@ -30,8 +36,16 @@
     margin: 12px;
 }
 
+.margin-sm-vertical {
+    margin: 12px 0;
+}
+
 .margin {
     margin: 24px;
+}
+
+.margin-vertical {
+    margin: 24px 0;
 }
 
 .margin-lg {

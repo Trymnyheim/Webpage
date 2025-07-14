@@ -27,6 +27,7 @@ function NavigationBar() {
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
 						<Nav.Link as={Link} to="/" onClick={handleLinkClick}>{t("home")}</Nav.Link>
+						<Nav.Link as={Link} to="/fun" onClick={handleLinkClick}>{t("fun")}</Nav.Link>
 						<Nav.Link as={Link} to="/aboutme" onClick={handleLinkClick}>{t("aboutme")}</Nav.Link>
 						{false &&
 						<NavDropdown title="Dropdown" id="basic-nav-dropdown">

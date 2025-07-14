@@ -1,0 +1,7 @@
+/* Colors */
+:root {
+    --green: rgb(25, 135, 84);
+    --green-light: rgb(199, 228, 215);
+    --error: rgb(136, 0, 0);
+    --body-size: 1140px;
+}
