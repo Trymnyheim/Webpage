@@ -1,6 +1,10 @@
 {
     "home": "Hjem",
-    "aboutme": "Om meg",
+    "aboutme": {
+        "h": "Om meg",
+        "bio": "Biografi",
+        "education": "Utdanning"
+    },
     "tasks": "Gjøremål",
     "fun": "Moro",
     "register": "Registrer deg",

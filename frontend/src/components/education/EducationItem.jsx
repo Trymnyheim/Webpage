@@ -12,7 +12,7 @@ function EducationItem({educationItem, t}) {
                         <td>
                             {educationItem.degree}
                             <br/>
-                            <Button href={educationItem.link} variant="secondary" className="margin-sm">
+                            <Button href={educationItem.link} className="margin-sm bg-green-dark">
                                 {t('general.about')}
                             </Button>
                         </td>
@@ -21,9 +21,11 @@ function EducationItem({educationItem, t}) {
                         </td>
                     </tr>
                     <tr>
-                        <td colSpan={2} style={{backgroundColor: 'gray'}}>
+                        <td colSpan={2} className='bg-green-dark'>
                             <div className="institution-container">
-                                <Button href={educationItem.institution.path} variant="light">{educationItem.institution.name}</Button>
+                                <Button href={educationItem.institution.path} variant="light">
+                                    {educationItem.institution.name}
+                                </Button>
                                 <img
                                     src={educationItem.institution.logo}
                                     alt={educationItem.institution.name}

@@ -23,22 +23,21 @@ function NavigationBar() {
 		<Navbar expand="lg" className="bg-body-tertiary" expanded={expanded}>
 			<Container>
 				<Navbar.Brand as={Link} to="/">Trym H. Nyheim</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : true)} />
+				<Navbar.Toggle aria-controls="basic-navbar-nav"
+					onClick={() => setExpanded(expanded ? false : true)}
+				/>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
 						<Nav.Link as={Link} to="/" onClick={handleLinkClick}>{t("home")}</Nav.Link>
 						<Nav.Link as={Link} to="/fun" onClick={handleLinkClick}>{t("fun")}</Nav.Link>
-						<Nav.Link as={Link} to="/aboutme" onClick={handleLinkClick}>{t("aboutme")}</Nav.Link>
-						{false &&
-						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1" onClick={handleLinkClick}>Action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.1" onClick={handleLinkClick}>Action</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4" onClick={handleLinkClick}>
-								Separated link
+						<NavDropdown title={t("aboutme.h")} id="basic-nav-dropdown">
+							<NavDropdown.Item as={Link} to="/aboutme" onClick={handleLinkClick}>
+								{t("aboutme.bio")}
+							</NavDropdown.Item>
+							<NavDropdown.Item as={Link} to="/aboutme/education" onClick={handleLinkClick}>
+								{t("aboutme.education")}
 							</NavDropdown.Item>
 						</NavDropdown>
-						}
 						<Nav.Link onClick={handleLoginClick}>{t("login")}</Nav.Link>
 					</Nav>
 					<LanguageSwitcher />

@@ -1,7 +1,12 @@
 /* Colors */
 :root {
     --green: rgb(25, 135, 84);
+    --green-dark: rgb(15, 80, 50);
     --green-light: rgb(199, 228, 215);
     --error: rgb(136, 0, 0);
     --body-size: 1140px;
+}
+
+.bg-green-dark {
+    background-color: var(--green-dark) !important;
 }

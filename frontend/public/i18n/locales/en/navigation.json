@@ -1,6 +1,10 @@
 {
     "home": "Home",
-    "aboutme": "About Me",
+    "aboutme": {
+        "h": "About Me",
+        "bio": "Biography",
+        "education": "Education"
+    },
     "tasks": "Tasks",
     "fun": "Fun",
     "register": "Register",

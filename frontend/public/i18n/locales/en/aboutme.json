@@ -1,0 +1,23 @@
+{
+    "name": {
+        "first": "Trym",
+        "middle": "Haakon",
+        "middle-short": "H.",
+        "last": "Nyheim"
+    },
+    "personal": "My Life",
+    "personal-text": "I grew up in Ski, 20 minutes from Oslo, along the forest line.",
+    "professional": {
+        "title": "Studies and Work",
+        "IT": {
+            "title": "Informatics",
+            "about": "",
+            "experience": ""
+        },
+        "music": {
+            "title": "Classical music",
+            "about": "After finishing upper secondary school, I spent a year at Toneheim Folk High School to explore whether I wanted to pursue music. In 2017, I began a four-year bachelor’s degree in classical percussion at the Grieg Academy (University of Bergen), while also playing in ensembles such as the Bergen Philharmonic Youth Orchestra and the Norwegian National Youth Orchestra. In my third year, I studied at the Sibelius Academy in Helsinki, and during that year I also received my first freelance job with the Bergen Philharmonic Orchestra. After completing my bachelor's degree in 2021, I started a master’s degree in Helsinki and worked simultaneously with several professional orchestras. Over time, I realized that a life as an orchestral musician didn’t bring me the joy I had expected, so I chose to end the master’s program and pursue studies in computer science instead.",
+            "experience": "I believe that my music studies have, among other things, given me the ability to apply creativity in problem-solving, that the complexity of music theory and analysis has made it easier for me to understand complex IT concepts, and that I am used to working in and being responsible for a team. I also participated in a research project on sports psychology for music, in collaboration with the Norwegian National center for elite sports (Olympiatoppen), where I was taught mental techniques for performing under pressure."
+        }
+    }
+}
