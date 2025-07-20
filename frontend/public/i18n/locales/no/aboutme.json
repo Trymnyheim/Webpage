@@ -5,15 +5,19 @@
         "middle-short": "H.",
         "last": "Nyheim"
     },
-    "personal": "Jeg vokste opp i Ski, 20 min fra Oslo, i et rekkehus rett ved skoggrensa. I barndommen spilte jeg trommer i skolekorpset og fotball.",
+    "personal": "Mitt liv",
+    "personal-text": "Jeg vokste opp i Ski, 20 min fra Oslo, hlet langs skoggrensa.",
     "professional": {
+        "title": "Studier og jobb",
         "IT": {
+            "title": "Informatikk",
             "about": "",
             "experience": ""
         },
         "music": {
-            "about": "Etter videregående skole gikk jeg et år på Toneheim Folkehøgskole, hvor jeg utforsket om musikk var noe jeg ønsket å gå videre med. Jeg brukte tiden min her på endel øving og forberedelser til opptaksprøver.\nFra høsten i 2017 begynte jeg på en 4-årig bachelorgrad i klassisk slagverk på Griegakademiet (UiB). Gjennom studiet spilte jeg også i diverse orkestre, som Bergen Filharmoniske Ungdomsorkester og Ungdomssymfonikerne (Norges nasjonale ungdomsorkester fra 18 til 28 år). Det 3. året av studie tilbrakte jeg i Helsinki på Sibeliusakademiet, noe som var utrolig lærerikt og spennende, og det var også dette året jeg fikk min første frilans jobb i Bergen Filharmoniske orkester. Jeg var også så heldig at jeg fikk delta på et forskningsprosjekt som omhandlet idrettspsykologi innen musikk. Her jobbet vi et semester med psykolog og coach fra Olympiatoppen for å styrke vårt forhold til prestasjon, forberedelser og målsetting.\nEtter jeg fullførte bachelorgraden i 2021, reiste jeg tilbake til Helsinki for å starte på en 2,5-årig mastergrad. Mens jeg studere der fikk jeg jobbe mye i forskjellige profesjonelle orkestre i Finland, og dette er en erfaring jeg er veldig glad for å ta med meg. På grunn av at jeg sakte, men sikkert innså at et yrke som orkestermusiker ikke ga meg den gleden jeg hadde forventet, så bestemte jeg meg for å ikke fullføre graden til fordel for å studere informatikk.",
-            "experience": "Det er overraskende hvor mange erfaringer og egenskaper som er overførbare fra klassisk musikk til informatikk. Jeg oppfatter blant annet at studiene i musikk har gitt meg evnen til å anvende kreativitet ved problemløsning, at kompleksiteten i musikkteori og analyse av musikk gjør at jeg lettere kan sette meg inn i kompleksitet innen IT, være vant til å jobbe i og ha overordnet ansvar for et team, og at mentale verktøy for å prestere på scenen fungerer i alle andre pressede situasjoner."
+            "title": "Klassisk musikk",
+            "about": "Etter videregående gikk jeg et år på Toneheim Folkehøgskole for å utforske om musikk var noe jeg ville satse på. I 2017 begynte jeg på en 4-årig bachelor i klassisk slagverk ved Griegakademiet (UiB), mens jeg spilte i blant annet Bergen Filharmoniske Ungdomsorkester og Ungdomssymfonikerne. Det tredje året studerte jeg ved Sibeliusakademiet i Helsinki, og dette året fikk jeg også fikk min første frilansjobb i Bergen Filharmoniske Orkester. Etter fullført bachelor i 2021, startet jeg på en mastergrad i Helsinki og jobbet samtidig i flere profesjonelle orkestre. Etter hvert innså jeg at et liv som orkestermusiker ikke ga meg den gleden jeg forventet, og valgte derfor å avslutte mastergraden for å studere informatikk.",
+            "experience": "Jeg oppfatter blant annet at studiene i musikk har gitt meg evnen til å anvende kreativitet ved problemløsning, at kompleksiteten i musikkteori og analyse av musikk gjør at jeg lettere kan sette meg inn i kompleksitet innen IT, og at jeg er vant til å jobbe i og ha overordnet ansvar for et team. Jeg deltok også i et forskningsprosjekt om idrettspsykologi i musikk, i samarbeid med Olympiatoppen, hvor jeg ble lært mentale verktøy for å prestere i pressede situasjoner."
         }
     }
 }
