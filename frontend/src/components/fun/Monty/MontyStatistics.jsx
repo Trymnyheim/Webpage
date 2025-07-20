@@ -4,10 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 
-/* t is a dictionary for text values that should contain keys:
-    title, ingress, input-label, generate, with, without, success, fail, total
-*/
-
 function MontyStatistics({ t }) {
     const [statistics, setStatistics] = useState(null);
     const [size, setSize] = useState(100000);
@@ -19,7 +15,6 @@ function MontyStatistics({ t }) {
             return;
         }
         setValidSize(true);
-
         const newMonty = new MontyHall();
         newMonty.generateStatistics(parseInt(size));
         setStatistics(newMonty.statistics);

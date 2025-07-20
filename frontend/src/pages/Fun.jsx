@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Monty from '../components/fun/Monty.jsx';
+import Monty from '../components/fun/Monty/Monty.jsx';
 import FunMenu from '../components/fun/FunMenu.jsx';
 import '../components/fun/fun.css';
 
