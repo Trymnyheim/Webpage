@@ -53,3 +53,27 @@
 .margin-lg {
     margin: 48px
 }
+
+.padding-sm {
+    padding: 12px;
+}
+
+.padding-sm-vertical {
+    padding: 12px 0;
+}
+
+.padding {
+    padding: 24px;
+}
+
+.padding-vertical {
+    padding: 24px 0;
+}
+
+.padding-lg {
+    padding: 48px
+}
+
+.contact-form {
+    background-color: aliceblue;
+}

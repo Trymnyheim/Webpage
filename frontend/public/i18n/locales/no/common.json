@@ -1,4 +1,17 @@
 {
     "read-more": "Les mer",
-    "read-less": "Les mindre"
+    "read-less": "Les mindre",
+
+    "name": "Navn",
+    "email": "E-postadresse",
+    "message": "Melding",
+    "subject": "Emne",
+    "name-error": "Kun mellom 3 og 50 tegn. Kun tillatt med bokstaver, mellomrom, apostrofer, punktum, komma og bindestrek.", 
+    "email-disclaimer": "E-postadressen din vil ikke bli brukt til noe annet enn å svare på henvendelsen.",
+    "email-error": "Vennligst oppgi en gyldig e-postadresse.",
+    "message-error": "Vennligst hold melding mellom 50 og 5000 tegn.",
+    "send": "Send",
+    "submit-error": "Vennligst fyll ut alle feltene korrekt.",
+    "send-error": "Kunne ikke sende meldingen. Vennligst prøve igjen senere eller ta kontakt på e-post.",
+    "send-success": "Melding har nå blitt sendt."
 }

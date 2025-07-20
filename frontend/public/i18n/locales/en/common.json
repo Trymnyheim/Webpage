@@ -1,4 +1,17 @@
 {
     "read-more": "Read more",
-    "read-less": "Read less"
+    "read-less": "Read less",
+
+    "name": "Name",
+    "email": "Email address",
+    "message": "Message",
+    "subject": "Subject",
+    "name-error": "Only between 3 and 50 characters. Please use only letters, spaces, apostrophes, periods, commas, and hyphens.", 
+    "email-disclaimer": "Your email will not be used in any other way than to respond to the inquiry.",
+    "email-error": "Please provide a valid email address.",
+    "message-error": "Please keep your message between 50 and 5000 characters.",
+    "send": "Send",
+    "submit-error": "Please fill out all the fields correctly.",
+    "send-error": "Message could not be sent. Please try again later or send an email instead.",
+    "send-success": "The message has now been sent."
 }
