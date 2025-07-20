@@ -1,14 +1,23 @@
 {
     "monty": {
         "game": {
-            "ingress": "I Monty Hall problemet er man en deltaker på et gameshow. Her får man valget mellom å åpne tre forskjellige dører. Bak en av dørene befinner premien seg, nemlig en bil, mens bak de to andre befinner det seg en geit. Man velger først en av dørene man ønsker å åpne. Deretter åpner programlederen en av de andre dørene enn den du har valgt og viser at det der befinner seg en geit. Så blir du spurt, \"Vil du bytte dør?\".",
-            "question": "Vil det å bytte dør øke sjansene for å vinne?",
-            "switch": "Står du i valget eller vil du bytte?",
-            "win": "Du vant!",
-            "lose": "Du tapte!"
+            "title": "Monty Hall Problemet",
+            "about": {
+                "title": "Les om Monty Hall",
+                "text": "I Monty Hall problemet er man en deltaker på et gameshow. Her får man valget mellom å åpne tre forskjellige dører. Bak en av dørene befinner premien seg, nemlig en sportsbil, mens bak de to andre befinner det seg en geit. Man velger først en av dørene man ønsker å åpne. Etter det åpner programlederen en av de andre dørene enn den du har valgt og viser at det der befinner seg en geit. Så blir du spurt, \"Vil du bytte dør?\". Valget du tar mellom de to resterende alternativene er premien du vinner."
+            },
+            "start": "Klikk på døren du tror premien er bak!",
+            "switch": "Vil du bytte? Velg din endelige dør.",
+            "win": "Du vant sportsbilen!",
+            "lose": "Du tapte!",
+            "reset": "Tilbakestill spillet"
         },
         "statistics": {
             "title": "Test sannsynligheten",
+            "about": {
+                "title": "Om sannsynligheten",
+                "text": "For de fleste jeg har snakket med er den intuitive oppfatningen at valget mellom å bytte dør eller beholde sitt første valg er ubetydelig for vinner sjansene. Altså at det uansett er 50% sannsynlig at man vinner. Jeg ble overrasket når jeg lærte at dette ikke stemte. Det er nemlig 1/3 sjanse for at det første valget er riktig og 2/3 sannsynlighet for at premien er bak en av de andre. Når en geit avsløres bak en av de andre dørene flyttes denne 2/3 sannsynligheten over til den uåpnende døren. Den opprinnelig valgte døren har fortsatt bare 1/3 sjanse for å være riktig."
+            },
             "ingress": "Velg din foretrukkede teststørrelse og se hvor mange spill som ender i suksess når man bytter i forhold til å beholde det første valget.",
             "input-label": "Teststørrelse",
             "generate": "Generer statistikk",

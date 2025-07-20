@@ -1,12 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import MontyGame from './MontyGame.jsx';
 import MontyStatistics from './MontyStatistics.jsx';
+import CardContainer from '../../containers/CardContainer.jsx';
 import './Monty.css';
-
-/* TODO:
-    - Make monty game responsive
-    - Refine game's text of ingress
-*/
 
 function Monty() {
     const { t } = useTranslation("games");
@@ -15,8 +11,20 @@ function Monty() {
 
     return (
         <>
-            <MontyGame t={tGame} />
-            <MontyStatistics t={tStats} />
+            <div className="monty-container">
+                <MontyGame t={tGame} />
+                <div className="monty-item">
+                    <CardContainer title={tGame('about.title')}>
+                        <p>{tGame('about.text')}</p>
+                    </CardContainer>
+                </div>
+                <MontyStatistics t={tStats} />
+                <div className="monty-item">
+                    <CardContainer title={tStats('about.title')}>
+                        <p>{tStats('about.text')}</p>
+                    </CardContainer>
+                </div>
+            </div>
         </>
     )
 }

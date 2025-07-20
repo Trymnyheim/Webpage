@@ -22,9 +22,9 @@ function MontyStatistics({ t }) {
 
 
     return (
-        <div style={{maxWidth: '600px', margin: '0 auto', padding: '12px'}}>
+        <div className="monty-item-fixed">
             <div className="margin-vertical">
-                <h2>{t('title')}</h2>
+                <h2 className="center">{t('title')}</h2>
                 <p>{t('ingress')}</p>
                 <Form className="margin-vertical"
                     onSubmit={(event) => {

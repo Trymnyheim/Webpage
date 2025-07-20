@@ -35,16 +35,19 @@ function MontyGame({ t }) {
     }
 
     return (
-        <div className="center">
-            <h4>
-                {gameState.goatDoor !== -1 ? t('switch') : 
-                    !gameState.isFinished ? t('start') : 
-                    gameState.isWin ? t('win') : t('lose')
-                }
-            </h4>
-            <Doors gameState={gameState} selectDoor={selectDoor} />
-            <Button onClick={reset}>Reset</Button>
-        </div>
+        <>
+            <div className="container center monty-item-fixed">
+                <h2 className="center">{t('title')}</h2>
+                <h4>
+                    {gameState.goatDoor !== -1 ? t('switch') : 
+                        !gameState.isFinished ? t('start') : 
+                        gameState.isWin ? t('win') : t('lose')
+                    }
+                </h4>
+                <Doors gameState={gameState} selectDoor={selectDoor} />
+                <Button onClick={reset}>{t('reset')}</Button>
+            </div>
+        </>
     )
 }
 

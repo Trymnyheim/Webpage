@@ -1,14 +1,23 @@
 {
     "monty": {
         "game": {
-            "ingress": "In the Monty Hall problem you are a contestant at a game show. You will be offered the choice between opening three different doors. Behind one of them is the prize, a car, but behind the other two there are goats. At first you select a door that you wish to open. However, then the host opens a different door than what you chose and reveals a goat behind it. You are then asked, \"Would you like to switch out your door?\".",
-            "question": "Will making the switch increase the chances of winning?",
-            "switch": "Do you want to switch? Make your final choice!",
-            "win": "You won!",
-            "lose": "You lost!"
+            "title": "The Monty Hall Problem",
+            "about": {
+                "title": "About Monty Hall",
+                "text": "In the Monty Hall problem you are a contestant at a game show. You will be offered the choice between opening three different doors. Behind one of them is the prize, a sports car, but behind the other two there are goats. At first, you select a door that you wish to open, however, then the host opens a different door than what you chose and reveals a goat behind it. You are then asked, \"Would you like to switch to the other door?\". The choice you then make, is the prize that you win."
+            },
+            "start": "Click on the door you think has the prize!",
+            "switch": "Do you want to switch? Select your final door.",
+            "win": "You won the sports car!",
+            "lose": "You lost!",
+            "reset": "Reset game"
         },
         "statistics": {
             "title": "Test the Probability",
+            "about": {
+                "title": "About the Probability",
+                "text": "For most people I have talked to, the intuitive assumption is that the choice between keeping or changing your door is insignificant. That it is either way a 50% chance of winning. I was suprised when I learnt that this is not the case. It is a 1/3 chance that the initial selection is correct and a 2/3 likelihood of the price being behind one of the other doors. When a goat is shown behind one of these doors, this 2/3 likelihood is transfered to the remaining closed door, while the initial selected door still only has a 1/3 chance of being right. To sum it up, switching gives you a 2/3 chance of success, while staying only gives you a 1/3 chance of success."
+            },
             "ingress": "Select your preferred size and see how many plays are successful when only switching and never switching.",
             "input-label": "Test-size",
             "generate": "Generate statistics",

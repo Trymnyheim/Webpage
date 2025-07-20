@@ -17,7 +17,7 @@ function Doors({gameState, selectDoor}) {
                 </div>
             ))}
         </div>
-    );
+    )
 }
 
 export default Doors;
