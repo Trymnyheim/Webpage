@@ -6,7 +6,3 @@
     --error: rgb(255, 0, 0);
     --body-size: 1140px;
 }
-
-.bg-green-dark {
-    background-color: var(--green-dark) !important;
-}

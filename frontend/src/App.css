@@ -13,6 +13,14 @@
     background-color: var(--green);
 }
 
+.bg-green-dark {
+    background-color: var(--green-dark) !important;
+}
+
+.bg-green-light {
+    background-color: var(--green-light) !important;
+}
+
 .error {
     color: var(--error);
 }
@@ -76,4 +84,17 @@
 
 .contact-form {
     background-color: aliceblue;
+}
+
+.flag {
+    height: 28px;
+    width: 40px;
+    margin-right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.flag.selected {
+    opacity: 1;
 }
