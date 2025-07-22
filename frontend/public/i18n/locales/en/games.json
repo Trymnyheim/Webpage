@@ -27,5 +27,11 @@
             "fail": "Fails",
             "total": "Total"
         }
+    },
+    "scrabble": {
+        "title": "Scrabble Solver",
+        "instructions": "Chose your language, select the pieces you have on hand, and see the words that can be put down and how many points they give.",
+        "your-pieces": "Your pieces",
+        "find-best": "Find best words"
     }
 }

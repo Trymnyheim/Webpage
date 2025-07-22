@@ -27,5 +27,11 @@
             "fail": "Feil",
             "total": "Totalt"
         }
+    },
+    "scrabble": {
+        "title": "Scrabbleløser",
+        "instructions": "Velg ditt språk, velg brikkene du har på hånden og se ordene som kan skrives rangert etter hva som gir mest poeng.",
+        "your-pieces": "Dine brikker",
+        "find-best": "Finn de beste ordene"
     }
 }
