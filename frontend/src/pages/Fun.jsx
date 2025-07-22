@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FunMenu from '../components/fun/FunMenu.jsx';
-import Monty from '../components/fun/monty/Monty.jsx';
+import Monty from '../components/fun/montyhall/Monty.jsx';
 import Scrabble from '../components/fun/scrabble/Scrabble.jsx';
 import '../components/fun/fun.css';
 
