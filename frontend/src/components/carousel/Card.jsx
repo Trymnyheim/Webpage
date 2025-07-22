@@ -2,7 +2,7 @@
 function Card({element, isEdge}) {
 
     return(
-        <div className={`card-container${isEdge ? ' card-edge' : ''}${element.handleClick ? ' clickable' : ''}`}
+        <div className={`carousel-card${isEdge ? ' card-edge' : ''}${element.handleClick ? ' clickable' : ''}`}
             onClick={element?.handleClick}
         >
             <img className="" src={element.img} />

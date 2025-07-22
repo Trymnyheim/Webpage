@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-.card-container {
+.carousel-card {
     position: relative;
     overflow: hidden;
     width: 60%;
@@ -49,7 +49,7 @@
     opacity: 0.6;
 }
 
-.card-container:not(.card-edge) {
+.carousel-card:not(.card-edge) {
     transform: scale(1.1);
     z-index: 2;
     opacity: 1;
@@ -71,14 +71,14 @@
     pointer-events: none;
 }
 
-.card-container img {
+.carousel-card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
 }
 
-.card-container:hover .card-text {
+.carousel-card:hover .card-text {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
