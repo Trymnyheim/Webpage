@@ -50,6 +50,11 @@
     align-items: center;
 }
 
+.fun-card img {
+    aspect-ratio: 1.2 / 1;
+    object-fit: cover;
+}
+
 .fun-card-title {
     position: absolute;
     padding: 12px;

@@ -16,7 +16,7 @@ function Fun() {
         },
         {
             title: 'Scrabble Solver', 
-            img: '/imgs/fun/monty/monty-thumb.svg',
+            img: '/imgs/fun/scrabble/scrabble-thumb.jpg',
             path: '/fun/scrabble'
         }
     ]
