@@ -32,6 +32,15 @@
         "title": "Scrabbleløser",
         "instructions": "Velg ditt språk, velg brikkene du har på hånden og se ordene som kan skrives rangert etter hva som gir mest poeng.",
         "your-pieces": "Dine brikker",
-        "find-best": "Finn de beste ordene"
+        "find-best": "Finn de beste ordene",
+        "words": "Ord",
+        "points": "Poeng",
+        "no-words": "Ingen ord funnet",
+        "ranking": "Rangering",
+        "previous": "Forrige",
+        "next": "Neste",
+        "page": "Side",
+        "no-connection": "Serveren kunne ikke nås. Vennligst prøv igjen senere.",
+        "error": "En feil har skjedd. Vennligst prøv igjen senere."
     }
 }

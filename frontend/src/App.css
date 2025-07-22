@@ -82,6 +82,10 @@
     padding: 48px
 }
 
+.padding-top-sm {
+    padding-top: 12px;
+}
+
 .contact-form {
     background-color: aliceblue;
 }

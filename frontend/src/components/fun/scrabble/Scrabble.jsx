@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import ScrabblePiece from './ScrabblePiece';
 import ScrabbleResults from './ScrabbleResults.jsx';
 import pieces from './pieces.json';
-import CardContainer from '../../containers/CardContainer.jsx'
+import Card from 'react-bootstrap/Card';
 import './scrabble.css';
 
 
@@ -49,8 +49,14 @@ function Scrabble() {
                 body: JSON.stringify({language, pieces: selected}),
             });
 
-            if (!res.ok) {
-                throw new Error(`Server error: ${res.status}`);
+            if(res.status >= 400) {
+                console.log(res.status);
+                throw new Error(t('scrabble.no-connection'));
+            }
+
+            if (!res.ok){
+                console.log(res.status);
+                throw new Error(t('scrabble.error'));
             }
 
             const data = await res.json();
@@ -84,7 +90,8 @@ function Scrabble() {
                 ))}
             </div>
 
-            <CardContainer title={t('scrabble.your-pieces')} colored>
+            <Card className="bg-green-light">
+                <Card.Title className="padding-top-sm">{t('scrabble.your-pieces')}</Card.Title>
                 <div className="pieces-container margin-vertical">
                     {selected.map((piece, index) => (
                         <ScrabblePiece 
@@ -93,11 +100,11 @@ function Scrabble() {
                         />
                     ))}
                 </div>
-            </CardContainer>
+            </Card>
             <Button onClick={searchWord} disabled={isDisabled} >
                 {t('scrabble.find-best')}
             </Button>
-            <ScrabbleResults results={results} />
+            <ScrabbleResults results={results} t={t} />
         </div>
     )
 }
