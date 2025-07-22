@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -19,7 +19,6 @@
 .card-container {
     position: relative;
     overflow: hidden;
-    height: 400px;
     width: 60%;
     margin: 24px -58px;
     border-radius: 12px;
@@ -30,20 +29,13 @@
     flex-shrink: 0;
     transition: all 0.4s ease;
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(221, 221, 221);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (min-width: 1200px) {
-    .card-container {
-        height: 500px;
-    }
 }
 
 @media (max-width: 650px) {
     .card-container {
         width: 80vw;
-        height: 300px;
     }
 }
 
@@ -82,7 +74,7 @@
 .card-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -90,6 +82,10 @@
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .nav-button {
