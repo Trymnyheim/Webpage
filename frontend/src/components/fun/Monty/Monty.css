@@ -32,6 +32,7 @@
     }
     
     .monty-container .card-container {
+        margin: auto;
         margin-top: 0;
     }
 }

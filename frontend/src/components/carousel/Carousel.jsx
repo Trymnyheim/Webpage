@@ -1,5 +1,5 @@
 import './Carousel.css';
-import Card from './Card.jsx';
+import CarouselCard from './CarouselCard.jsx';
 import { useState, useRef } from 'react';
 
 function Carousel({elements}) {
@@ -37,9 +37,9 @@ function Carousel({elements}) {
         <div className="carousel-wrapper">
         <button className="nav-button left" onClick={() => goNext(-1)}>〈</button>
         <div className="carousel-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
-            <Card element={elements[prevIndex]} isEdge />
-            <Card element={elements[currentIndex]} />
-            <Card element={elements[nextIndex]} isEdge />
+            <CarouselCard element={elements[prevIndex]} isEdge />
+            <CarouselCard element={elements[currentIndex]} />
+            <CarouselCard element={elements[nextIndex]} isEdge />
         </div>
         <button className="nav-button right" onClick={() => goNext(1)}>〉</button>
         </div>  
