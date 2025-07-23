@@ -42,32 +42,38 @@ function Scrabble() {
     }, [selected])
 
     const searchWord = async () => {
+        let letters = "";
+        selected.forEach((piece) => {
+            letters += piece.letter;
+        });
+        console.log(letters);
+
         try {
-            const res = await fetch('', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({language, pieces: selected}),
+            const res = await fetch(`http://localhost:3001/scrabble/search?letters=${letters}`, {
+                method: 'GET',
             });
 
-            if(res.status >= 400) {
+            // Check HTTP status
+            if (!res.ok) {
                 console.log(res.status);
                 throw new Error(t('scrabble.no-connection'));
             }
 
-            if (!res.ok){
-                console.log(res.status);
+            const data = await res.json();
+
+            // Assuming your API returns { success: boolean, ... }
+            if (!data.success) {
                 throw new Error(t('scrabble.error'));
             }
 
-            const data = await res.json();
-            if (!data.success) {
-                throw new Error("Failed when searching for solution");
-            }
+            console.log(data);
+
             setResults(data);
         } catch (error) {
-            setResults({error})
+            setResults({ error });
         }
     }
+
 
     return (
         <div className="scrabble-container center">

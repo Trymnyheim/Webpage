@@ -6,8 +6,6 @@ import '../components/fun/fun.css';
 
 function Fun() {
 
-    //TODO: create scrabble thumbnail
-
     const funItems = [
         {
             title: 'Monty Hall', 

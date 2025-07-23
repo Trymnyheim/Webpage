@@ -18,17 +18,14 @@ function ScrabbleResults({ results, t }) {
 
     const [page, setPage] = useState(1);
 
-    // ✅ Only depend on page + words.length (not the entire results object)
     const { first, last } = useMemo(() => {
         const first = (page - 1) * 50;
         const last = Math.min(first + 49, words.length - 1);
         return { first, last };
     }, [page, words.length]);
 
-    // ✅ Slice once per page change
     const table = useMemo(() => words.slice(first, last + 1), [words, first, last]);
 
-    // ✅ If the data changes and current page is out of range, reset page
     useEffect(() => {
         if (page > totalPages) {
             setPage(1);
@@ -40,9 +37,8 @@ function ScrabbleResults({ results, t }) {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>{t('scrabble.rank')}</th>
-                        <th>{t('scrabble.words')}</th>
                         <th>{t('scrabble.points')}</th>
+                        <th>{t('scrabble.words')}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,8 +46,8 @@ function ScrabbleResults({ results, t }) {
                         table.map((word, i) => (
                             <tr key={first + i}>
                                 <td>{first + i + 1}</td>
-                                <td>{word.word}</td>
-                                <td>{word.points}</td>
+                                <td>{word.words.join(', ')}</td>
+                                <td>{word.value}</td>
                             </tr>
                         ))
                     ) : (
