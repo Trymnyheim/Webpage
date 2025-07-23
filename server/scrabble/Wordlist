@@ -1,0 +1,33 @@
+const fs = require('fs');
+const { PrefixTree } = require('./PrefixTree');
+
+class Wordlist {
+    constructor(dictPath) {
+        this.dictionary = dictPath;
+        this.pTree = new PrefixTree();
+        this.buildPrefixTree();
+    }
+
+    buildPrefixTree() {
+        try {
+            const fileData = fs.readFileSync(this.dictionary, 'utf-8');
+            const words = fileData
+                .split(/\r?\n/)              // split into lines
+                .map(line => line.trim())    // remove spaces
+                .filter(line => line !== "");// skip empty lines
+
+            for (const word of words) {
+                this.pTree.insert(word);
+            }
+        } catch (e) {
+            console.error("Error reading dictionary:", e);
+            process.exit(1);
+        }
+    }
+
+    search(str) {
+        return this.pTree.search(str);
+    }
+}
+
+module.exports = { Wordlist };
