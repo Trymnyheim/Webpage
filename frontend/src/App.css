@@ -9,6 +9,15 @@
     overflow: hidden;
 }
 
+.link {
+    text-decoration: none;
+    color: black
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
 .bg-green {
     background-color: var(--green);
 }
@@ -19,6 +28,10 @@
 
 .bg-green-light {
     background-color: var(--green-light) !important;
+}
+
+.bg-red-dark {
+    background-color: rgb(98, 23, 23) !important;
 }
 
 .error {
@@ -86,10 +99,6 @@
     padding-top: 12px;
 }
 
-.contact-form {
-    background-color: aliceblue;
-}
-
 .flag {
     height: 28px;
     width: 40px;
@@ -101,4 +110,27 @@
 
 .flag.selected {
     opacity: 1;
+}
+
+
+.contact-form {
+    margin: 0;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.contact-item {
+  flex: 1 1 300px;
+  margin: 12px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 24px;
 }

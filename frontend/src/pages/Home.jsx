@@ -14,16 +14,10 @@ function HomeApp() {
 
     return (
         <>
-            <div className="center" style={{marginTop: '24px'}}>
-                <h1>{t('title')}</h1>
-                <p>{t('text')}</p>
-
-            </div>
             <div className="project-container center padding-vertical">
                 <h2></h2>
                 <Carousel elements={elements}/>
             </div>
-            <ContactForm />
         </>
     )
 }

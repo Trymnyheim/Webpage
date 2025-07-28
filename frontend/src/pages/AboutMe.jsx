@@ -6,6 +6,9 @@ import ReadMore from '../components/containers/ReadMore.jsx'
 function AboutMe() {
 
     const {t} = useTranslation('aboutme');
+    const {t: tEducation} = useTranslation('education');
+
+    const education = tEducation('education', { returnObjects: true });
 
     // const name = `${t('name.first')} ${t('name.middle')} ${t('name.last')}`;
 
@@ -14,14 +17,24 @@ function AboutMe() {
 
     return (
         <Routes>
-            <Route index element={
+            <Route path="education" element={
                 <>
-                    <div>
-                        <h2>{t('personal')}</h2>
-                        <p>{t('personal-text')}</p>
-                        <h2>{t('professional.title')}</h2>
-                        <p>{t('professional.IT.about')}</p>
-                        <p>{t('professional.IT.experience')}</p>
+                    {false && 
+                        <div>
+                            <h2>{t('personal')}</h2>
+                            <p>{t('personal-text')}</p>
+                            <h2>{t('professional.title')}</h2>
+                        </div>
+                    }
+                    <div className="education-containers">
+                        <div className="education-container center">
+                            <h2>{t('professional.IT.title')}</h2>
+                            <EducationContainer education={education.IT} t={tEducation} />
+                        </div>
+                        <div className="education-container center">
+                            <h2>{t('professional.music.title')}</h2>
+                            <EducationContainer education={education.music} t={tEducation} secondary />
+                        </div>
                     </div>
                     <div style={container}>
                         <div style={item}>                    
@@ -32,14 +45,6 @@ function AboutMe() {
                                     <p>{t('professional.IT.experience')}</p>
                                 </>
                             }/>
-                        </div>
-                        <img
-                            src="/imgs/me/us-sq.jpg"
-                            style={item}
-                        />
-                    </div>
-                    <div style={container}>
-                        <div style={item}>                    
                             <ReadMore content={
                                 <>
                                     <h2>{t('professional.music.title')}</h2>
@@ -55,9 +60,6 @@ function AboutMe() {
                     </div>
                 </>
             } />
-            <Route path="education" element={
-                <EducationContainer />
-            }/>
         </Routes>
     )
 }

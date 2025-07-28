@@ -31,13 +31,11 @@ function NavigationBar() {
 						<Nav.Link as={Link} to="/" onClick={handleLinkClick}>{t("home")}</Nav.Link>
 						<Nav.Link as={Link} to="/fun" onClick={handleLinkClick}>{t("fun")}</Nav.Link>
 						<NavDropdown title={t("aboutme.h")} id="basic-nav-dropdown">
-							<NavDropdown.Item as={Link} to="/aboutme" onClick={handleLinkClick}>
-								{t("aboutme.bio")}
-							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} to="/aboutme/education" onClick={handleLinkClick}>
 								{t("aboutme.education")}
 							</NavDropdown.Item>
 						</NavDropdown>
+						<Nav.Link as={Link} to="/contact" onClick={handleLinkClick}>{t("contact")}</Nav.Link>
 						<Nav.Link onClick={handleLoginClick}>{t("login")}</Nav.Link>
 					</Nav>
 					<LanguageSwitcher />

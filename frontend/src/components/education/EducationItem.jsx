@@ -2,7 +2,7 @@ import './education.css';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-function EducationItem({educationItem, t}) {
+function EducationItem({educationItem, t, secondary}) {
 
     return (
         <div className="education-item center" >
@@ -12,7 +12,9 @@ function EducationItem({educationItem, t}) {
                         <td>
                             {educationItem.degree}
                             <br/>
-                            <Button href={educationItem.link} className="margin-sm bg-green-dark">
+                            <Button href={educationItem.link} variant="secondary"
+                                className={`margin-sm ${secondary ? 'bg-red-dark' : 'bg-green-dark'}`}
+                            >
                                 {t('general.about')}
                             </Button>
                         </td>
@@ -21,7 +23,7 @@ function EducationItem({educationItem, t}) {
                         </td>
                     </tr>
                     <tr>
-                        <td colSpan={2} className='bg-green-dark'>
+                        <td colSpan={2} className={secondary ? 'bg-red-dark' : 'bg-green-dark'}>
                             <div className="institution-container">
                                 <Button href={educationItem.institution.path} variant="light">
                                     {educationItem.institution.name}

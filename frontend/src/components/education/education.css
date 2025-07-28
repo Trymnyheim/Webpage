@@ -5,10 +5,14 @@
     text-align: center;
 }
 
-.education-container {
+.education-containers {
     display: flex;
     flex-wrap: wrap;
-    max-width: 700px;
+    margin: 48px 0; 
+}
+
+.education-container {
+    flex: 1 1 400px;
     padding: 12px;
     gap: 24px;
 }

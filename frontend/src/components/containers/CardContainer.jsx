@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
-function CardContainer({title, children, image, colored}) {
+function CardContainer({title, children, image, imageUnder, colored}) {
     return (
         <Card className={`card-container${colored ? ' bg-green-light' : ''}`}>
             {image && <Card.Img variant="top" src={image} />}
@@ -8,6 +8,7 @@ function CardContainer({title, children, image, colored}) {
                 <Card.Title>{title}</Card.Title>
                 {children}
             </Card.Body>
+            {imageUnder && <Card.Img variant="bottom" src={imageUnder} />}
         </Card>
     )
 }

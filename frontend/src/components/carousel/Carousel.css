@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 650px) {
-    .card-container {
+    .carousel-card {
         width: 80vw;
     }
 }

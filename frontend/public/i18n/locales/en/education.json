@@ -6,8 +6,8 @@
         "exchangeTo": "Exchange to",
         "about": "Read more"
     },
-    "education": 
-        [
+    "education": {
+        "IT": [
             {
                 "institution": {
                     "name": "University of Oslo",
@@ -49,7 +49,10 @@
                 "end": "2024, Spring",
                 "exchange": {},
                 "link": "https://www.usn.no/studier/arsstudium-i-informasjonsbehandling/"
-            },
+            }
+        ],
+        "music": [
+
             {
                 "institution": {
                     "name": "Uniarts Helsinki, Sibelius Academy",
@@ -80,4 +83,5 @@
                 "link": "https://www.uib.no/en/grieg/48498/bachelors-programme-music-performance-or-composition"
             }
         ]
+    }
 }
