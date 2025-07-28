@@ -45,12 +45,11 @@ function ContactForm() {
             return;
         }
 
-        // TODO: Enter url for api:
         try {
-            const res = await fetch('', {
+            const res = await fetch('http://localhost:3001/email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, subject, message }),
+                body: JSON.stringify({ subject, text: `from: ${name}\nemail: ${email}:\n\n${message}`}),
             });
 
             if (!res.ok) {

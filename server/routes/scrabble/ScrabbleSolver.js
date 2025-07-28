@@ -1,12 +1,12 @@
 // scrabbleSolver.js
 const fs = require('fs');
 const { permutations } = require('./permutations');
-const { Wordlist } = require('./Wordlist');
+//const { Wordlist } = require('./Wordlist');
 const points = require('./files/points.json');
 
 class ScrabbleSolver {
   constructor(dictPath) {
-    this.list = new Wordlist(dictPath);  // sync load
+    //this.list = new Wordlist(dictPath);  // sync load
   }
 
   getScrabbleValue(word) {

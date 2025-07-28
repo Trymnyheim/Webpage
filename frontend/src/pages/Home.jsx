@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Carousel from '../components/carousel/Carousel.jsx';
+import ContactForm from "../components/ContactForm.jsx";
 
 function HomeApp() {
 
@@ -22,6 +23,7 @@ function HomeApp() {
                 <h2></h2>
                 <Carousel elements={elements}/>
             </div>
+            <ContactForm />
         </>
     )
 }
