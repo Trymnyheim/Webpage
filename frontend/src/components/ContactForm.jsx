@@ -46,7 +46,7 @@ function ContactForm() {
         }
 
         try {
-            const res = await fetch('http://api.trymhnyheim.no/email', {
+            const res = await fetch('https://api.trymhnyheim.no/email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ subject, text: `from: ${name}\nemail: ${email}:\n\n${message}`}),
