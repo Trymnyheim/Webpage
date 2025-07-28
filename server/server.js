@@ -6,18 +6,20 @@ const host = '0.0.0.0';
 
 const allowedOrigins = ['https://trymhnyheim.no', 'https://dev.trymhnyheim.no'];
 
-app.use(cors({
+const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Origin not allowed service'));
+      callback(new Error('Origin not allowed by server'));
     }
   },
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 204
-}));
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
