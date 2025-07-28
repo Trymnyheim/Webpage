@@ -4,7 +4,17 @@ const app = express();
 const port = 3000;
 const host = '0.0.0.0';
 
-app.use(cors({ origin: 'https://trymhnyheim.no' }));
+const allowedOrigins = ['https://trymhnyheim.no', 'https://dev.trymhnyheim.no'];
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Origin not allowed service'));
+    }
+  }
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
